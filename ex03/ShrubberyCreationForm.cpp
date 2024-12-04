@@ -39,7 +39,8 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
     else
     {
         std::string str("_shrubberry");
-        std::ofstream outfile(this->_target + str);
+        std::string str2 = this->_target + str;
+        std::ofstream outfile(str2.c_str());
         if (!outfile)
         {
             std::cerr << "Error! file couln't created" << std::endl;
