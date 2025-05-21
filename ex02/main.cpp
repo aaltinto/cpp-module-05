@@ -22,16 +22,6 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
-
-    std::cout << "\n\n----------------------------\n\n";
-    try
-    {
-        Form f1("Top Secret", 320, 1);
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
       
     try
     {
