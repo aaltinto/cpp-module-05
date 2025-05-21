@@ -4,8 +4,9 @@ int main()
 {  
     try
     {
-        Bureaucrat b1("Osman", 2);
-        std::cout << b1 << std::endl;
+        Bureaucrat const *b1 = new Bureaucrat("Osman", 2);
+        std::cout << *b1 << std::endl;
+        delete b1;
     }
     catch(const std::exception& e)
     {
@@ -14,7 +15,9 @@ int main()
 
     try
     {
-        Bureaucrat b2("Huseyin", 162);
+        Bureaucrat const *b1 = new Bureaucrat("huseyin", 162);
+        std::cout << *b1 << std::endl;
+        delete b1;
     }
     catch(const std::exception& e)
     {
@@ -22,8 +25,8 @@ int main()
     }
     try
     {
-        Bureaucrat b3("Pembe", 0);
-        std::cout << b3 << std::endl;
+        Bureaucrat const *b1 = new Bureaucrat("pembe", 0);
+        std::cout << *b1 << std::endl;
     }
     catch(const std::exception& e)
     {
@@ -32,8 +35,9 @@ int main()
       
     try
     {
-        Bureaucrat b4("Fatma", 149);
-        std::cout << b4 << std::endl;
+        Bureaucrat const *b1 = new Bureaucrat("Fatma", 149);
+        std::cout << *b1 << std::endl;
+        delete b1;
     }
     catch(const std::exception& e)
     {
