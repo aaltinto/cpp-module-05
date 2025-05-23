@@ -4,40 +4,36 @@
 #include "includes/RobotomyRequestForm.hpp"
 
 int main()
-{  
-
+{
     try
     {
-        Bureaucrat b2("Huseyin", 162);
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-    try
-    {
-        Bureaucrat b3("Pembe", 0);
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-      
-    try
-    {
-        ShrubberyCreationForm a("home");
-        RobotomyRequestForm f("Robert");
-        Bureaucrat b1("Ons", 2);
-        std::cout << b1 << std::endl;
-        Bureaucrat b4("Korn", 149);
-        std::cout << b4 << std::endl;
-        b4.signForm(a);
-        std::cout << a << std::endl;
-        b1.signForm(a);
-        std::cout << a << std::endl;
-        b1.executeForm(a);
-        b1.signForm(f);
-        b1.executeForm(f);
+        ShrubberyCreationForm shrubbery("home");
+        std::cout << shrubbery << std::endl;
+        
+        std::cout << std::endl << "------------------------" << std::endl << std::endl;
+        
+        RobotomyRequestForm robert("Robert");
+        std::cout << robert << std::endl;
+        
+        std::cout << std::endl << "------------------------" << std::endl << std::endl;
+        
+        Bureaucrat Ons("Ons", 2);
+        std::cout << Ons << std::endl;
+       
+        std::cout << std::endl << "------------------------" << std::endl << std::endl;
+        
+        Bureaucrat Korn("Korn", 149);
+        std::cout << Korn << std::endl;
+        
+        std::cout << std::endl << "------------------------" << std::endl << std::endl;
+        
+        Korn.signForm(shrubbery);
+        std::cout << shrubbery << std::endl;
+        Ons.signForm(shrubbery);
+        std::cout << shrubbery << std::endl;
+        Ons.executeForm(shrubbery);
+        Ons.signForm(robert);
+        Ons.executeForm(robert);
     }
     catch(const std::exception& e)
     {

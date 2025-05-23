@@ -10,7 +10,7 @@ class PresidentialPardonForm: public AForm
         PresidentialPardonForm(std::string target);
         PresidentialPardonForm(PresidentialPardonForm const &copy);
         ~PresidentialPardonForm();
-        // PresidentialPardonForm &operator=(PresidentialPardonForm &copy);
+        PresidentialPardonForm &operator=(PresidentialPardonForm &copy);
         void    execute(Bureaucrat const &executor) const;
 
         class FormNotSigned : public std::exception

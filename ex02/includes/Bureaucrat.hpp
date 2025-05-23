@@ -4,9 +4,6 @@
 #include <stdexcept>
 #include "AForm.hpp"
 
-#define RED "\e[1;31m"
-#define reset "\e[0m"
-
 class AForm;
 
 class Bureaucrat

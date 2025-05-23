@@ -18,8 +18,9 @@ RobotomyRequestForm::~RobotomyRequestForm()
 
 RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm const &copy)
 {
-    if (this == &copy)
+     if (this == &copy)
         return *this;
+    this->_target = copy._target;
     return *this;
 }
 

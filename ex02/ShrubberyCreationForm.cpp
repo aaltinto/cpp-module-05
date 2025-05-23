@@ -1,7 +1,7 @@
 #include "includes/ShrubberyCreationForm.hpp"
 #include <fstream>
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target): AForm("PresidentialPardonForm", 145, 137)
 {
     
     this->_target = target;
@@ -22,6 +22,7 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm &c
 {
     if (this == &copy)
         return *this;
+    this->_target = copy._target;
     return *this;
 }
 

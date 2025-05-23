@@ -1,25 +1,7 @@
 #include "includes/Bureaucrat.hpp"
 
 int main()
-{  
-
-    try
-    {
-        Bureaucrat b2("Huseyin", 162);
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-    try
-    {
-        Bureaucrat b3("Pembe", 0);
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-
+{
     std::cout << "\n\n----------------------------\n\n";
     try
     {
@@ -33,6 +15,7 @@ int main()
     try
     {
         Form f2("Top Secret", 3, 1);
+        std::cout << f2 << std::endl;
         Bureaucrat b1("Osman", 2);
         std::cout << b1 << std::endl;
         Bureaucrat b4("Fatma", 149);

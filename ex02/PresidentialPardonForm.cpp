@@ -16,10 +16,13 @@ PresidentialPardonForm::~PresidentialPardonForm()
     std::cout << "PresidentialPardonForm destructor called" << std::endl;
 }
 
-// PresidentialPardonForm &PresidentialPardonForm::operator=(PresidentialPardonForm &copy)
-// {
-//     this->_target = copy._target;
-// }
+PresidentialPardonForm &PresidentialPardonForm::operator=(PresidentialPardonForm &copy)
+{
+     if (this == &copy)
+        return *this;
+    this->_target = copy._target;
+    return *this;
+}
 
 const char *PresidentialPardonForm::FormNotSigned::what() const throw()
 {

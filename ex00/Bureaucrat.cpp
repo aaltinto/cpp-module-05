@@ -7,7 +7,7 @@ const char *Bureaucrat::GradeTooHighException::what() const throw()
 
 const char *Bureaucrat::GradeTooLowException::what() const throw()
 {
-    return "Grade too low!";
+    return "\e[1;31m Grade too low!\e[0m";
 }
 
 Bureaucrat::Bureaucrat(std::string name, int grade): _name(name), _grade(grade)

@@ -3,7 +3,7 @@
 Form::Form(std::string name, int gradeToSign, int gradeToExecute):
     _name(name), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute)
 {
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Form " << _name << " default constructor called" << std::endl;
     if (gradeToExecute < 1 || gradeToSign < 1)
         throw (Form::GradeTooHighException());
     if (gradeToExecute > 150 || gradeToSign > 150)
@@ -24,7 +24,7 @@ Form::Form(Form const &copy):
 
 Form::~Form()
 {
-    std::cout << "Destructor called" << std::endl;
+    std::cout << "Form destructor called" << std::endl;
 }
 
 Form &Form::operator=(Form const &copy)
