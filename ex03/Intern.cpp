@@ -7,6 +7,8 @@ Intern::Intern()
 
 Intern::Intern(Intern const &copy)
 {
+    *this = copy;
+    // this->name = copy.name;
     std::cout << "Intern copy constructor called" << std::endl;
 }
 
