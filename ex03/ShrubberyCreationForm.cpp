@@ -1,7 +1,7 @@
 #include "includes/ShrubberyCreationForm.hpp"
 #include <fstream>
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target): AForm("ShrubberyCreationForm", 145, 137)
 {
     
     this->_target = target;
