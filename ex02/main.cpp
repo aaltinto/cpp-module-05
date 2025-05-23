@@ -29,9 +29,11 @@ int main()
         
         Korn.signForm(shrubbery);
         std::cout << shrubbery << std::endl;
+        std::cout << std::endl << "------------------------" << std::endl << std::endl;
         Ons.signForm(shrubbery);
         std::cout << shrubbery << std::endl;
         Ons.executeForm(shrubbery);
+        std::cout << std::endl << "------------------------" << std::endl << std::endl;
         Ons.signForm(robert);
         Ons.executeForm(robert);
     }
